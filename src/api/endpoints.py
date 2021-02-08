@@ -3,7 +3,7 @@ sys.path.append('..')
 import flask
 import argparse
 from flask import request,jsonify
-from torBot import test
+from crawler import test
 from flask_cors import CORS
 
 app=flask.Flask(__name__)

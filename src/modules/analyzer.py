@@ -20,7 +20,7 @@ default_style.layout_fn = default_layout
 
 class LinkTree:
     """
-    This is a class that represents a tree of links within TorBot. This can
+    This is a class that represents a tree of links within crawler. This can
     be used to build a tree, examine the number of nodes, check if a node
     exists within a tree, displaying the tree, and downloading the tree. It
     will be expanded in the future to meet further needs.

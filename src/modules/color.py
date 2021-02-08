@@ -24,7 +24,7 @@ COLORS = {
 
 class color:
     """
-    Class that contains colors used for TorBot in terminal and a method
+    Class that contains colors used for crawler in terminal and a method
     that adds color to a string.
 
     Attributes:

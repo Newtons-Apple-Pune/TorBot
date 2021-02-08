@@ -20,7 +20,7 @@
 
 
 ### Status/Social links
-[![Build Status](https://travis-ci.org/DedSecInside/TorBot.svg?branch=dev)](https://travis-ci.org/DedSecInside/TorBoT)
+[![Build Status](https://travis-ci.org/DedSecInside/crawler.svg?branch=dev)](https://travis-ci.org/DedSecInside/crawler)
 [![Slack Invite](https://img.shields.io/badge/Join-Slack-informational?style=flat-square&logo=slack)](https://join.slack.com/t/dedsec-inside/shared_invite/zt-i4jcgj8w-1ecHiSdRubwuppAzz8~yfg)
 [![](https://img.shields.io/badge/Built%20with-❤-orange.svg?style=flat-square)]()
 [![](https://img.shields.io/badge/Made%20with-Python-red.svg?style=flat-square)]()
@@ -50,7 +50,7 @@ while(URLs is not empty) do
 6. Crawl custom domains.(Completed)
 7. Check if the link is live.(Completed)
 8. Built-in Updater.(Completed)
-9. TorBot GUI (In progress)
+9. crawler GUI (In progress)
 10. Social Media integration.(not Started)
 ...(will be updated)
 
@@ -61,7 +61,7 @@ If its a new module, it should be put inside the modules directory.
 The branch name should be your new feature name in the format <Feature_featurename_version(optional)>. For example, <i>Feature_FasterCrawl_1.0</i>.
 Contributor name will be updated to the below list. 😀
 <br>
-<b> NOTE : The PR should be made only to `dev` branch of TorBot. </b>
+<b> NOTE : The PR should be made only to `dev` branch of crawler. </b>
 
 ### OS Dependencies
 - Tor
@@ -79,32 +79,32 @@ Contributor name will be updated to the below list. 😀
 
 
 ## Basic setup
-Before you run the torBot make sure the following things are done properly:
+Before you run the crawler make sure the following things are done properly:
 
 * Run tor service
 `sudo service tor start`
 
 * Make sure that your torrc is configured to SOCKS_PORT localhost:9050
 
-* Install TorBot Python requirements
+* Install crawler Python requirements
 `pip3 install -r requirements.txt`
 
-On Linux platforms, you can make an executable for TorBot by using the install.sh script.
+On Linux platforms, you can make an executable for crawler by using the install.sh script.
 You will need to give the script the correct permissions using `chmod +x install.sh`
-Now you can run `./install.sh` to create the torBot binary.
-Run `./torBot` to execute the program. 
+Now you can run `./install.sh` to create the crawler binary.
+Run `./crawler` to execute the program. 
 
-An alternative way of running torBot is shown below, along with help instructions.
+An alternative way of running crawler is shown below, along with help instructions.
 
-`python3 torBot.py or use the -h/--help argument`
+`python3 crawler.py or use the -h/--help argument`
 <pre>
-usage: torBot.py [-h] [-v] [--update] [-q] [-u URL] [-s] [-m] [-e EXTENSION]
+usage: crawler.py [-h] [-v] [--update] [-q] [-u URL] [-s] [-m] [-e EXTENSION]
                  [-l] [-i]
 
 optional arguments:
   -h, --help            Show this help message and exit
-  -v, --version         Show current version of TorBot.
-  --update              Update TorBot to the latest stable version
+  -v, --version         Show current version of crawler.
+  --update              Update crawler to the latest stable version
   -q, --quiet           Prevent header from displaying
   -u URL, --url URL     Specifiy a website link to crawl, currently returns links on that page
   -s, --save            Save results to a file in json format
@@ -118,7 +118,7 @@ optional arguments:
 
 * NOTE: All flags under -u URL, --url URL must also be passed a -u flag.
 
-Read more about torrc here : [Torrc](https://github.com/DedSecInside/TorBoT/blob/master/Tor.md)
+Read more about torrc here : [Torrc](https://github.com/DedSecInside/crawler/blob/master/Tor.md)
 
 
 #### Using the GUI 
@@ -129,10 +129,10 @@ Read more about torrc here : [Torrc](https://github.com/DedSecInside/TorBoT/blob
 - Ensure than you have a tor container running on port 9050.
 - Build the image using following command:
     
-    `docker build -t dedsecinside/torbot .`
+    `docker build -t dedsecinside/crawler .`
 - Run the container (make sure to link the tor container as `tor`):
     
-    `docker run --link tor:tor --rm -ti dedsecinside/torbot`
+    `docker run --link tor:tor --rm -ti dedsecinside/crawler`
 
 ## TO-DO
 - [X] Visualization Module
@@ -158,7 +158,7 @@ If the idea is worth implementing, congratz, you are now a contributor.
     editor="Ranganathan, G.
     and Chen, Joy
     and Rocha, {\'A}lvaro",
-    title="TorBot: Open Source Intelligence Tool for Dark Web",
+    title="crawler: Open Source Intelligence Tool for Dark Web",
     booktitle="Inventive Communication and Computational Technologies",
     year="2020",
     publisher="Springer Singapore",

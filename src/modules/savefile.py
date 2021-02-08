@@ -17,7 +17,7 @@ def saveJson(datatype, data):
         (str): Name of file data was saved to.
     """
     timestr = time.strftime("%Y%m%d-%H%M%S")
-    file_name = "TorBot-Export-"+datatype+timestr+".json"
+    file_name = "crawler-Export-"+datatype+timestr+".json"
     # Json File Creation
     with open(file_name, "w+") as f:
         # Store data in Json format

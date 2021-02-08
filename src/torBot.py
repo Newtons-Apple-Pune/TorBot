@@ -20,7 +20,7 @@ from modules.collect_data import collect_data
 LOCALHOST = "127.0.0.1"
 DEFPORT = 9050
 
-# TorBot VERSION
+# crawler VERSION
 __VERSION = "1.4.0"
 
 
@@ -79,28 +79,28 @@ def header():
 
     title = r"""
                                     {banner}
-                    #######################################################
-                    #  TorBot - An OSINT Tool for Dark Web                #
-                    #  GitHub : https://github.com/DedsecInside/TorBot    #
-                    #  Help : use -h for help text                        #
-                    #######################################################
+                    #############################################################
+                    #  crawler - An OSINT Tool for Dark Web                      #
+                    #  GitHub : https://github.com/Newtons-Apple-Pune/crawler    #
+                    #  Help : use -h for help text                              #
+                    #############################################################
                                   {license_msg}
               """
 
     title = title.format(license_msg=license_msg, banner=banner)
-    print(title)
+    #print(title)
 
 
 def get_args():
     """
-    Parses user flags passed to TorBot
+    Parses user flags passed to crawler
     """
-    parser = argparse.ArgumentParser(prog="TorBot",
+    parser = argparse.ArgumentParser(prog="crawler",
                                      usage="Gather and analayze data from Tor sites.")
     parser.add_argument("--version", action="store_true",
-                        help="Show current version of TorBot.")
+                        help="Show current version of crawler.")
     parser.add_argument("--update", action="store_true",
-                        help="Update TorBot to the latest stable version")
+                        help="Update crawler to the latest stable version")
     parser.add_argument("-q", "--quiet", action="store_true")
     parser.add_argument("-u", "--url", help="Specifiy a website link to crawl")
     parser.add_argument("--ip", help="Change default ip of tor")
@@ -126,14 +126,14 @@ def get_args():
                         help="Gather data for analysis")
     parser.add_argument("--no-socks",
                         action="store_true",
-                        help="Don't use local SOCKS. Useful when TorBot is"
+                        help="Don't use local SOCKS. Useful when crawler is"
                              " launched behind a Whonix Gateway")
     return parser.parse_args()
 
 
 def main():
     """
-    TorBot's Core
+    crawler's Core
     """
     args = get_args()
     connect(args.ip, args.port, args.no_socks)
@@ -144,7 +144,7 @@ def main():
     # If flag is -v, --update, -q/--quiet then user only runs that operation
     # because these are single flags only
     if args.version:
-        print("TorBot Version:" + __VERSION)
+        print("crawler Version:" + __VERSION)
         exit()
     if args.update:
         updateTor()
@@ -185,14 +185,14 @@ def main():
                 print(node.json_data)
                 #saveJson("Links", node.links)
     else:
-        print("usage: See torBot.py -h for possible arguments.")
+        print("usage: See crawler.py -h for possible arguments.")
 
     print("\n\n")
 
 def test(args):
 
     """
-    TorBot's Core
+    crawler's Core
     """
     #args = get_args()
     #connect("127.0.0.1",9050,False)
@@ -204,7 +204,7 @@ def test(args):
     # If flag is -v, --update, -q/--quiet then user only runs that operation
     # because these are single flags only
     if args['version']==True:
-        print("TorBot Version:" + __VERSION)
+        print("crawler Version:" + __VERSION)
         exit()
     #if args['update']==True:
       #  updateTor()
@@ -249,7 +249,7 @@ def test(args):
             if args['save']==True:
                 saveJson("Links", node.links)
     else:
-        print("usage: See torBot.py -h for possible arguments.")
+        print("usage: See crawler.py -h for possible arguments.")
 
     print("\n\n")
     #jsonvalues = [node.json_data, node.links]

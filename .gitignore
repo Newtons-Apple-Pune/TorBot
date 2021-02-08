@@ -21,7 +21,7 @@ __pycache*
 __pycache__/
 
 # Misc
-torBot
+crawler
 .*.swp
 .ropeproject/
 .idea/

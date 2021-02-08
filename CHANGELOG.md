@@ -23,14 +23,14 @@ All notable changes to this project will be documented in this file.
 * Major code improvements
 * Updated README.md
 * Updated dependencies
-* Refactored TorBot
+* Refactored crawler
 
 ### Added
 
 * Visualizer Module
 * Download option to save Tree into different formats.
 * DB module
-* Installation shell script to create torBot binary
+* Installation shell script to create crawler binary
 * Test for getting links that uses a Mock Object to reproduce tests without touching actual servers.
 * BFS algorithm for crawling
 * Documentation for functions

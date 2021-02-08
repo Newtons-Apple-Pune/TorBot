@@ -1,6 +1,6 @@
 
 """
-Provides essential utilites for the rest of TorBot app.
+Provides essential utilites for the rest of crawler app.
 """
 import os
 

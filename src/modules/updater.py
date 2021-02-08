@@ -1,5 +1,5 @@
 """
-Module that facilitates the updating of the installed version of TorBot.
+Module that facilitates the updating of the installed version of crawler.
 """
 import subprocess
 
@@ -24,9 +24,9 @@ def updateTor():
                  stderr=subprocess.STDOUT)
         update_out = update.stdout.read()
         if update_out[90:109].decode("utf-8") == 'Already up to date.':
-            print("TorBot is already up-to-date.")
+            print("crawler is already up-to-date.")
         else:
-            print("TorBot has succesfully updated to latest stable version.")
+            print("crawler has succesfully updated to latest stable version.")
     else:
         subprocess.Popen(
             ["git", "init"],
@@ -34,7 +34,7 @@ def updateTor():
             stderr=subprocess.STDOUT)
         subprocess.Popen(
             ["git", "remote", "add", "origin",
-                "https://github.com/DedSecInside/TorBoT.git"],
+                "https://github.com/DedSecInside/crawler.git"],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT)
         update = subprocess.Popen(
@@ -43,6 +43,6 @@ def updateTor():
             stderr=subprocess.STDOUT)
         update_out = update.stdout.read()
         if update_out[90:109].decode("utf-8") == 'Already up to date.':
-            print("TorBot is already up-to-date.")
+            print("crawler is already up-to-date.")
         else:
-            print("TorBot has succesfully updated to latest stable version.")
+            print("crawler has succesfully updated to latest stable version.")

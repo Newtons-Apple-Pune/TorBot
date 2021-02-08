@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 RUN chmod +x install.sh
 RUN bash install.sh
 
-ENTRYPOINT ["./torBot", "--ip", "tor"]
+ENTRYPOINT ["./crawler", "--ip", "tor"]
